@@ -1,0 +1,30 @@
+// This is a partial.
+// It lies in <source>/_sass, just waiting to be imported.
+// It does not contain the YAML front matter and has no corresponding output file in the built site.
+
+@font-face {
+	font-family: 'WhoopAss';
+	src: url('/assets/whoopass.eot');
+	src:
+		local('WhoopAss'),
+		url('/assets/whoopass.ttf')
+		format('truetype');
+}
+
+code, pre {
+  font-family: Consolas, "Consolas for Powerline", "Courier New", Courier, monospace;
+  color: green;
+}
+
+.aaa {
+  color: green;
+}
+
+
+h1 {
+  font-family: 'WhoopAss', sans-serif;
+}
+
+h2 {
+  font-family: 'Sanchez', serif;
+}
