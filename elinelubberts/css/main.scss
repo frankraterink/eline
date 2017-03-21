@@ -3,11 +3,26 @@
 # only Main files contain this front matter, not partials.
 ---
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
 @import "style";
 
 .content {
   width: 80%;
   margin: 0 auto;
+
+  position: relative;
 }
 
 .bbb {

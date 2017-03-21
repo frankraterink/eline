@@ -11,6 +11,10 @@
 		format('truetype');
 }
 
+$color-white: #fff;
+$color-pink: #b9007f;
+$color-green: #40F200;
+
 code, pre {
   font-family: Consolas, "Consolas for Powerline", "Courier New", Courier, monospace;
   color: green;
@@ -21,10 +25,141 @@ code, pre {
 }
 
 
-h1 {
+h1, h2 {
   font-family: 'WhoopAss', sans-serif;
 }
 
+h1, .like-h1 {
+  color: $color-pink;
+  font-size: 2.7em;
+  letter-spacing: 0.06em;
+}
+
 h2 {
+  font-size: 1.7em;
+}
+
+h3 {
+  @extend .like-normal;
+  display: inline-block;
+  position: relative;
+  .bar {
+    height: 1.6em;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: -30px;
+    top: -4px;
+    &.bar-pink {
+      width: 233%;
+      background-color: $color-pink;
+      -ms-transform: rotate(-3deg);
+      -webkit-transform: rotate(-3deg);
+      transform: rotate(-3deg);
+    }
+    &.bar-green {
+      width: 143%;
+      background-color: $color-green;
+      -ms-transform: rotate(-3deg);
+      -webkit-transform: rotate(-3deg);
+      transform: rotate(2deg);
+    }
+  }
+  .text {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+}
+
+.text-default {
   font-family: 'Sanchez', serif;
+  font-size: 1.1em;
+  color: #000;
+}
+
+.text-white {
+  color: $color-white;
+}
+
+p, li, a, .like-normal {
+  @extend .text-default;
+  max-width: 700px;
+}
+
+
+
+.narrow {
+  max-width: 430px;
+}
+
+.gutter-top-small {
+  margin-top: 20px;
+}
+.gutter-top-large {
+  margin-top: 80px;
+}
+
+
+
+
+
+.menu {
+  position: absolute;
+  width: 300px;
+  ul {
+    list-style-type: none;
+    li {
+      margin: 0;
+    }
+  }
+}
+
+.intro {
+  h1 {
+    margin: 0px;
+  }
+  h2 {
+    margin-top: 0px;
+  }
+  width: 440px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.page {
+  padding-top: 200px;
+  h2 {
+    margin: 50px 0px 0px;
+  }
+  p:first-of-type {
+    margin-top: 0px;
+  }
+}
+
+.contact {
+  background-color: $color-pink;
+  padding: 26px 10px;
+  position: absolute;
+  width: 300px;
+  right: 0px;
+  top: 200px;
+  ul {
+    list-style-type: none;
+    li {
+      margin-left: 0;
+    }
+  }
+}
+
+.footer {
+  @extend .text-default;
+  @extend .text-white;
+  background-color: #000;
+  font-family: 'Sanchez', serif;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

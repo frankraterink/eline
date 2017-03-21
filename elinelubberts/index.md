@@ -4,7 +4,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
 ---
-<div>
-test <span class="aaa">aaa</span>
-test <span class="bbb">bbb</span>
+<div class="intro">
+  <h1>MINDBLOWING</h1>
+  <h2>FREELANCE CONTENT & BRANDING SPECIALIST</h2>
 </div>
