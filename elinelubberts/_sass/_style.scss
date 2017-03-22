@@ -96,6 +96,9 @@ p, li, a, .like-normal {
 .gutter-top-small {
   margin-top: 20px;
 }
+.gutter-bottom-small {
+  margin-bottom: 20px;
+}
 .gutter-top-large {
   margin-top: 80px;
 }
@@ -107,6 +110,7 @@ p, li, a, .like-normal {
 .menu {
   position: absolute;
   width: 300px;
+  z-index: 999;
   ul {
     list-style-type: none;
     li {
@@ -132,8 +136,12 @@ p, li, a, .like-normal {
   h2 {
     margin: 50px 0px 0px;
   }
-  p:first-of-type {
-    margin-top: 0px;
+  p, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    &.gutter-bottom-small {
+      @extend .gutter-bottom-small;
+    }
   }
 }
 
@@ -162,4 +170,20 @@ p, li, a, .like-normal {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.page-image {
+  height: 1000px;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  right: 0px;
+  z-index: 0;
+  bottom: 0px;
+  &.page-image-wat-doe-ik {
+    background: url(/assets/p2.jpg) no-repeat right bottom;
+  }
+  &.page-image-over-eline {
+    background: url(/assets/p3.jpg) no-repeat right bottom;
+  }
 }
