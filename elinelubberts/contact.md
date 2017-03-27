@@ -5,17 +5,20 @@
 layout: default
 ---
 <section class="content">
-  <div class="contact">
-    <ul>
-      <li class="text-white">ELINE LUBBERTS</li>
-      <li>Voorstraat 49</li>
-      <li>2611 JL Delft</li>
-      <li class="gutter-top-small">06 49891135</li>
-      <li>eline.lubberts@me.com</li>
-      <li class="gutter-top-small"><a href="">LINKEDIN</a></li>
-      <li><a href="">FACEBOOK</a></li>
-    </ul>
+  <div class="page">
+    <div class="contact">
+      <ul>
+        <li class="text-white">ELINE LUBBERTS</li>
+        <li>Voorstraat 49</li>
+        <li>2611 JL Delft</li>
+        <li class="gutter-top-small">06 49891135</li>
+        <li>eline.lubberts@me.com</li>
+        <li class="gutter-top-small"><a href="">LINKEDIN</a></li>
+        <li><a href="">FACEBOOK</a></li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<div class="page-image page-image-contact"></div>
+<div class="page-image page-image-desktop page-image-contact"></div>
+<div class="page-image page-image-mobile page-image-contact"></div>

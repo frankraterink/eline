@@ -14,4 +14,5 @@ layout: default
   </div>
 </section>
 
-<div class="page-image page-image-over-eline"></div>
+<div class="page-image page-image-desktop page-image-over-eline"></div>
+<div class="page-image page-image-mobile page-image-over-eline"></div>

@@ -48,4 +48,5 @@ layout: default
 
 </section>
 
-<div class="page-image page-image-wat-doe-ik"></div>
+<div class="page-image page-image-desktop page-image-wat-doe-ik"></div>
+<div class="page-image page-image-mobile page-image-wat-doe-ik"></div>
