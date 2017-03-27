@@ -15,6 +15,9 @@ $color-white: #fff;
 $color-pink: #b9007f;
 $color-green: #40F200;
 
+$gutter-small: 20px;
+$gutter-large: 80px;
+
 code, pre {
   font-family: Consolas, "Consolas for Powerline", "Courier New", Courier, monospace;
   color: green;
@@ -22,6 +25,10 @@ code, pre {
 
 .aaa {
   color: green;
+}
+
+.max-width {
+	max-width: 700px;
 }
 
 
@@ -84,7 +91,7 @@ h3 {
 
 p, li, a, .like-normal {
   @extend .text-default;
-  max-width: 700px;
+	@extend .max-width;
 }
 
 
@@ -94,13 +101,17 @@ p, li, a, .like-normal {
 }
 
 .gutter-top-small {
-  margin-top: 20px;
-}
-.gutter-bottom-small {
-  margin-bottom: 20px;
+  margin-top: $gutter-small;
 }
 .gutter-top-large {
-  margin-top: 80px;
+  margin-top: $gutter-large;
+}
+
+.gutter-bottom-small {
+  margin-bottom: $gutter-small;
+}
+.gutter-bottom-large {
+  margin-bottom: $gutter-large;
 }
 
 
@@ -108,9 +119,9 @@ p, li, a, .like-normal {
 
 
 .menu {
-  position: absolute;
   width: 300px;
   z-index: 999;
+  position: relative;
   ul {
     list-style-type: none;
     li {
@@ -128,11 +139,12 @@ p, li, a, .like-normal {
   }
   width: 440px;
   text-align: center;
-  margin: 0 auto;
+  margin: 50px auto 0;
 }
 
 .page {
-  padding-top: 200px;
+	@extend .gutter-top-large;
+	@extend .gutter-bottom-large;
   h2 {
     margin: 50px 0px 0px;
   }
@@ -170,13 +182,38 @@ p, li, a, .like-normal {
   bottom: 0;
   left: 0;
   right: 0;
+	z-index: 999;
+}
+
+.col-container {
+	@extend .gutter-top-large;
+	@extend .max-width;
+	.col {
+		float: left;
+	}
+	&.col-3 {
+		.col {
+			width: 30%;
+		}
+	}
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.portfolio-image {
+	@extend .gutter-bottom-small;
+	width: 80%;
+	box-shadow: 8px 8px 7px 0px rgba(0, 0, 0, 0.65);
 }
 
 .page-image {
   height: 1000px;
   width: 100%;
   background-size: cover;
-  position: absolute;
+  position: fixed;
   right: 0px;
   z-index: 0;
   bottom: 0px;
