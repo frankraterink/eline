@@ -17,3 +17,5 @@ layout: default
     </ul>
   </div>
 </section>
+
+<div class="page-image page-image-contact"></div>

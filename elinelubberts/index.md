@@ -8,3 +8,5 @@ layout: default
   <h1>MINDBLOWING</h1>
   <h2>FREELANCE CONTENT & BRANDING SPECIALIST</h2>
 </div>
+
+<div class="page-image page-image-home"></div>

@@ -119,9 +119,17 @@ p, li, a, .like-normal {
 
 
 .menu {
-  width: 300px;
+  width: 350px;
   z-index: 999;
-  position: relative;
+	height: 250px;
+	position: absolute;
+    top: 0px;
+    padding-top: 30px;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+56,0+100 */
+	background: -moz-linear-gradient(142deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 36%, rgba(255,255,255,0) 50%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(142deg, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 36%,rgba(255,255,255,0) 50%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(142deg, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 36%,rgba(255,255,255,0) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   ul {
     list-style-type: none;
     li {
@@ -140,6 +148,8 @@ p, li, a, .like-normal {
   width: 440px;
   text-align: center;
   margin: 50px auto 0;
+	position: relative;
+	z-index: 999;
 }
 
 .page {
@@ -210,17 +220,26 @@ p, li, a, .like-normal {
 }
 
 .page-image {
-  height: 1000px;
+  height: 100%;
   width: 100%;
-  background-size: cover;
   position: fixed;
   right: 0px;
   z-index: 0;
   bottom: 0px;
+  &.page-image-home {
+    background: url(/assets/p1.jpg) no-repeat 14% bottom;
+		background-size: cover;
+  }
   &.page-image-wat-doe-ik {
     background: url(/assets/p2.jpg) no-repeat right bottom;
+		background-size: cover;
   }
   &.page-image-over-eline {
     background: url(/assets/p3.jpg) no-repeat right bottom;
+		background-size: cover;
+  }
+	&.page-image-contact {
+    background: url(/assets/p4.jpg) no-repeat 14% bottom;
+		background-size: cover;
   }
 }
