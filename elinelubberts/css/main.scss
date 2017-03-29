@@ -130,7 +130,7 @@ a {
 }
 
 .content {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -280,7 +280,7 @@ a {
 		font-size: .83em;
     position: relative;
 	}
-  @media screen and (max-width: 370px) {
+  @media screen and (max-width: 415px) { // iphone plus
     display: none;
   }
 }
