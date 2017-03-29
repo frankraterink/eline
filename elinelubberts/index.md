@@ -6,11 +6,18 @@ layout: default
 ---
 <section class="content">
   <div class="page">
-<div class="intro">
-  <h1>MINDBLOWING</h1>
-  <h2>FREELANCE CONTENT & BRANDING SPECIALIST</h2>
+    <div class="intro">
+      <h1>MINDBLOWING</h1>
+      <h2>FREELANCE CONTENT & BRANDING SPECIALIST</h2>
+    </div>
+  </div>
+</section>
+
+<div class="movie-banner">
+  <a href="https://www.facebook.com/338102739642606/videos/1234728743313330/">
+    <img src="{{site.root_url}}/assets/movie-banner.png" />
+  </a>
 </div>
-</div></section>
 
 <div class="page-image page-image-desktop page-image-home"></div>
 <div class="page-image page-image-mobile page-image-home"></div>

@@ -16,4 +16,377 @@ body {
   height: 100%;
 }
 
-@import "style";
+// This is a partial.
+// It lies in <source>/_sass, just waiting to be imported.
+// It does not contain the YAML front matter and has no corresponding output file in the built site.
+
+@font-face {
+	font-family: 'WhoopAss';
+	src: url('{{site.root_url}}/assets/whoopass.eot');
+	src:
+		local('WhoopAss'),
+		url('{{site.root_url}}/assets/whoopass.ttf')
+		format('truetype');
+}
+
+$color-white: #fff;
+$color-pink: #ed028c;
+$color-green: #40ae49;
+
+$gutter-small: 20px;
+$gutter-large: 80px;
+
+code, pre {
+  font-family: Consolas, "Consolas for Powerline", "Courier New", Courier, monospace;
+  color: green;
+}
+
+@media screen and (max-width: 900px) {
+	.mobile-hidden {
+		display: none!important;
+	}
+}
+
+.mobile-visible {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+	.mobile-visible {
+		display: block!important;
+	}
+}
+
+.max-width {
+	max-width: 700px;
+}
+
+
+h1, h2 {
+  font-family: 'WhoopAss', sans-serif;
+}
+
+h1, .like-h1 {
+  color: $color-pink;
+  font-size: 2.7em;
+  letter-spacing: 0.06em;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
+h3 {
+  @extend .like-normal;
+  display: inline-block;
+  position: relative;
+  .bar {
+    height: 1.6em;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: -30px;
+    top: -4px;
+    &.bar-pink {
+      width: 233%;
+      background-color: $color-pink;
+      -ms-transform: rotate(-3deg);
+      -webkit-transform: rotate(-3deg);
+      transform: rotate(-3deg);
+    }
+    &.bar-green {
+      width: 143%;
+      background-color: $color-green;
+      -ms-transform: rotate(-3deg);
+      -webkit-transform: rotate(-3deg);
+      transform: rotate(2deg);
+    }
+  }
+  .text {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+}
+
+.text-default {
+  font-family: 'Sanchez', serif;
+  font-size: 1.1em;
+  color: #000;
+	@media screen and (max-width: 900px) {
+		font-size: 1.0em;
+	}
+}
+
+.text-white {
+  color: $color-white;
+}
+
+p, li, .like-normal {
+  @extend .text-default;
+	@extend .max-width;
+}
+a {
+  color: #000;
+}
+
+.content {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+	@media screen and (max-width: 900px) {
+		width: 80%;
+	}
+}
+
+.narrow {
+  max-width: 430px;
+}
+
+.gutter-top-small {
+  margin-top: $gutter-small;
+}
+.gutter-top-large {
+  margin-top: $gutter-large;
+}
+
+.gutter-bottom-small {
+  margin-bottom: $gutter-small;
+}
+.gutter-bottom-large {
+  margin-bottom: $gutter-large;
+}
+
+
+
+
+
+.menu {
+  width: 350px;
+  z-index: 999;
+	height: 250px;
+	position: absolute;
+    top: 0px;
+    padding-top: 30px;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+56,0+100 */
+	background: -moz-linear-gradient(142deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 36%, rgba(255,255,255,0) 50%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(142deg, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 36%,rgba(255,255,255,0) 50%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(142deg, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 36%,rgba(255,255,255,0) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+  ul {
+    list-style-type: none;
+    li {
+      margin: 0;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+	@media screen and (max-width: 900px) {
+		position: relative;
+		background: none;
+		width: 100%;
+		height: auto;
+		padding-top: 0;
+		ul {
+			text-align: center;
+			padding: 0;
+	    li {
+				display: inline-block;
+	      margin: 0;
+				margin-right: 10px;
+        font-size: .9em;
+				&:last-of-type {
+					margin-right: 0;
+				}
+	    }
+	  }
+	}
+}
+
+.intro {
+  width: 340px;
+  text-align: center;
+  margin: 50px auto 0;
+	position: relative;
+	z-index: 999;
+	@media screen and (max-width: 900px) {
+		width: 300px;
+		margin: 0 0 0 5px;
+	}
+}
+
+.page {
+	padding: $gutter-large 0;
+	min-height: 600px;
+  h2 {
+    margin: 50px 0px 0px;
+		@media screen and (max-width: 900px) {
+			margin: 0 5px;
+		}
+  }
+  p, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    &.gutter-bottom-small {
+      @extend .gutter-bottom-small;
+    }
+  }
+	.intro {
+		h1 {
+	    margin: 0px;
+			font-size: 2.5em;
+	  }
+		h2 {
+	    margin-top: 0px;
+			font-size: 1.5em;
+	  }
+	}
+}
+
+.contact {
+  background-color: $color-pink;
+  padding: 26px 10px;
+  position: absolute;
+  width: 300px;
+  right: 0px;
+  top: 200px;
+  ul {
+    list-style-type: none;
+    li {
+      margin-left: 0;
+    }
+  }
+}
+
+.footer {
+  @extend .text-default;
+  @extend .text-white;
+  background-color: #000;
+  font-family: 'Sanchez', serif;
+  padding: 10px 10px 10px 40px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+	z-index: 999;
+	@media screen and (max-width: 900px) {
+    padding: 10px;
+		font-size: .83em;
+    position: relative;
+	}
+  @media screen and (max-width: 370px) {
+    display: none;
+  }
+}
+
+.col-container {
+	@extend .gutter-top-large;
+	@extend .max-width;
+	.col {
+		float: left;
+	}
+	&.col-3 {
+		.col {
+			width: 30%;
+		}
+	}
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	@media screen and (max-width: 900px) {
+		.col {
+			float: none;
+		}
+		&.col-3 {
+			.col {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.portfolio-image {
+	@extend .gutter-bottom-small;
+	width: 80%;
+	box-shadow: 8px 8px 7px 0px rgba(0, 0, 0, 0.65);
+}
+
+.page-image {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  right: 0px;
+  z-index: 0;
+  bottom: 0px;
+	&.page-image-mobile {
+		display: none;
+	}
+  &.page-image-home {
+    background: url({{site.root_url}}/assets/p1.jpg) no-repeat 14% bottom;
+		background-size: cover;
+  }
+  &.page-image-wat-doe-ik {
+    background: url({{site.root_url}}/assets/p2.jpg) no-repeat right bottom;
+		background-size: contain;
+  }
+  &.page-image-over-eline {
+    background: url({{site.root_url}}/assets/p3.jpg) no-repeat right bottom;
+		background-size: contain;
+  }
+	&.page-image-contact {
+    background: url({{site.root_url}}/assets/p4.jpg) no-repeat 14% bottom;
+		background-size: cover;
+  }
+	@media screen and (max-width: 900px) {
+		opacity: .3;
+		&.page-image-mobile {
+			display: block;
+			&.page-image-home {
+		    background: url({{site.root_url}}/assets/p1-mobile.jpg) no-repeat 14% bottom;
+				background-size: cover;
+		  }
+		  &.page-image-wat-doe-ik {
+		    background: url({{site.root_url}}/assets/p2-mobile.jpg) no-repeat right bottom;
+				background-size: contain;
+		  }
+		  &.page-image-over-eline {
+		    background: url({{site.root_url}}/assets/p3-mobile.jpg) no-repeat right bottom;
+				background-size: contain;
+		  }
+			&.page-image-contact {
+		    background: url({{site.root_url}}/assets/p4-mobile.jpg) no-repeat 14% bottom;
+				background-size: cover;
+		  }
+		}
+		&.page-image-desktop {
+			display: none;
+		}
+	}
+}
+
+.movie-banner {
+  width: 330px;
+  position: absolute;
+  right: 0px;
+  top: 40px;
+  z-index: 999;
+
+  @media screen and (max-width: 900px) {
+    top: 70%;
+  }
+  a {
+    display: block;
+    img {
+      max-width: 100%;
+      border: none;
+    }
+  }
+}

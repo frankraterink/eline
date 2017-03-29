@@ -26,20 +26,20 @@ layout: default
 
     <div class="col-container col-3">
       <div class="col">
-        <img class="portfolio-image" src="/assets/wat-doe-ik-1.jpg" />
-        <img class="portfolio-image" src="/assets/wat-doe-ik-2.jpg" />
-        <img class="portfolio-image" src="/assets/wat-doe-ik-3.jpg" />
-        <img class="portfolio-image" src="/assets/wat-doe-ik-4.jpg" />
+        <img class="portfolio-image" src="{{site.root_url}}/assets/wat-doe-ik-1.jpg" />
+        <img class="portfolio-image" src="{{site.root_url}}/assets/wat-doe-ik-2.jpg" />
+        <img class="portfolio-image" src="{{site.root_url}}/assets/wat-doe-ik-3.jpg" />
+        <img class="portfolio-image" src="{{site.root_url}}/assets/wat-doe-ik-4.jpg" />
       </div>
       <div class="col">
-        <img class="portfolio-image" src="/assets/wat-doe-ik-5.jpg" />
-        <img class="portfolio-image" src="/assets/wat-doe-ik-6.jpg" />
-        <img class="portfolio-image" src="/assets/wat-doe-ik-7.jpg" />
+        <img class="portfolio-image" src="{{site.root_url}}/assets/wat-doe-ik-5.jpg" />
+        <img class="portfolio-image" src="{{site.root_url}}/assets/wat-doe-ik-6.jpg" />
+        <img class="portfolio-image" src="{{site.root_url}}/assets/wat-doe-ik-7.jpg" />
       </div>
       <div class="col">
-        <img class="portfolio-image" src="/assets/wat-doe-ik-8.jpg" />
-        <img class="portfolio-image" src="/assets/wat-doe-ik-9.jpg" />
-        <img class="portfolio-image" src="/assets/wat-doe-ik-10.jpg" />
+        <img class="portfolio-image" src="{{site.root_url}}/assets/wat-doe-ik-8.jpg" />
+        <img class="portfolio-image" src="{{site.root_url}}/assets/wat-doe-ik-9.jpg" />
+        <img class="portfolio-image" src="{{site.root_url}}/assets/wat-doe-ik-10.jpg" />
       </div>
     </div>
 
